@@ -1,5 +1,13 @@
-<div class="form-group">
-    <label for="id">Id:</label>
-    <input type="text" class="form-control" ng-model="id" id="id">
+<div id="home">
+    <form name="post" class="form-validation">
+        <div class="form-group">
+            <h3 class="home-post--header">Submit a post id</h3>
+            <input type="number" class="form-control" ng-model="home.post.id" min="0" required>
+        </div>
+        <div class="home-post--submit">
+            <button type="submit" class="btn btn-primary btn-rounded" ng-disabled="post.$invalid"
+                    ng-click="home.save()">Submit
+            </button>
+        </div>
+    </form>
 </div>
-<h1>Output {{id}}</h1>
