@@ -4,9 +4,3 @@ gradlew.bat
 /gradle
 /.gradle
 /*/build
-/controller/src/main/resources/static
-/ui/node_modules
-/ui/.tmp
-/ui/.sass-cache
-/ui/dist
-/ui/bower_components
