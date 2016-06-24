@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;
@@ -29,11 +31,11 @@ public class DefaultPostFacade implements PostFacade {
     private String postHost;
 
     @Override
-    public Iterable<Post> findAll() {
+    public Page<Post> findAll(final Pageable pageable) {
         LOGGER.info("DefaultPostFacade.findAll()");
-        final Iterable<Post> Posts = postService.findAll();
+        final Page<Post> posts = postService.findAll(pageable);
         LOGGER.info("DefaultPostFacade.findAll() finished");
-        return Posts;
+        return posts;
     }
 
     @Override

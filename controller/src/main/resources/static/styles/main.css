@@ -6,17 +6,20 @@ body {
     justify-content: center;
 }
 
-#home {
-    width: 400px;
+#home, #posts {
     background-color: #eee;
     padding: 20px;
     border-radius: 20px;
 }
 
-#home .home-post--header {
-    text-align: center;
+#home {
+    width: 400px;
 }
 
-#home .home-post--submit {
-    text-align: center;
+#posts {
+    width: 800px;
+}
+
+#posts table {
+    background-color: white;
 }

@@ -16,11 +16,11 @@ angular
         controller: 'Home',
         controllerAs: 'home'
       })
-      .state('history', {
-        url: '/history',
-        templateUrl: 'views/history.html',
-        controller: 'History',
-        controllerAs: 'history'
+      .state('posts', {
+        url: '/posts',
+        templateUrl: 'views/posts.html',
+        controller: 'Posts',
+        controllerAs: 'posts'
       });
 
     $urlRouterProvider.otherwise('/');
