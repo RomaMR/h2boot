@@ -8,7 +8,7 @@ angular.module('h2boot')
 
         vm.save = function () {
             Storage.save({
-                    model: 'typicode',
+                    model: 'posts',
                     id: vm.post.id
                 },
                 vm.post.id,

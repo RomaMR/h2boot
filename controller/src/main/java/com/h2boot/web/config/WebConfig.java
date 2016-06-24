@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -19,6 +20,13 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         ServletRegistrationBean registrationBean = new ServletRegistrationBean( new WebServlet());
         registrationBean.addUrlMappings("/console/*");
         return registrationBean;
+    }
+
+    @Bean(name = "defaultRestTemplate")
+    public RestTemplate restTemplate() {
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.getMessageConverters().add(jacksonMessageConverter());
+        return restTemplate;
     }
 
     @Bean

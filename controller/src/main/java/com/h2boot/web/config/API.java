@@ -5,8 +5,8 @@ public interface API {
     String ROOT = "/api";
     String ID = "/{id}";
 
-    interface Typicode {
-        String ROOT = API.ROOT + "/typicodes";
+    interface Post {
+        String ROOT = API.ROOT + "/posts";
     }
 
 }

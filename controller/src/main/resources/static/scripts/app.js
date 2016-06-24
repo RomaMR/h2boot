@@ -2,15 +2,10 @@
 
 angular
   .module('h2boot', [
-    // 'ngAnimate',
-    // 'ngCookies',
     'ngResource',
-    // 'ngSanitize',
-    // 'ngTouch',
     'ui.router',
     'ui.bootstrap',
     'ui.utils',
-    // 'ui.jq',
     'toaster'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {

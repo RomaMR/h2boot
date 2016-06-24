@@ -1,2 +1,6 @@
-spring.h2.console.enabled=false
-spring.h2.console.path=/h2-console
+spring:
+      h2:
+        console:
+              enabled: false
+jsonplaceholder:
+              typicode: "http://jsonplaceholder.typicode.com/posts/"
